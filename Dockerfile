@@ -1,6 +1,7 @@
-# Build stage
+# Build stage - runs natively (not emulated) for faster builds
 ARG NODE_VERSION=22
-FROM node:${NODE_VERSION}-bookworm-slim AS builder
+ARG BUILDPLATFORM=linux/amd64
+FROM --platform=$BUILDPLATFORM node:${NODE_VERSION}-bookworm-slim AS builder
 
 WORKDIR /build
 
@@ -26,7 +27,7 @@ COPY quant/entrypoints/ /quant-entrypoint.d/
 RUN find /quant-entrypoint.d -name "*.sh" -exec chmod +x {} \; 2>/dev/null || true
 
 # Copy built application from builder
-# Nuxt builds to .output directory with Nitro
+# Nuxt builds to .output directory with Nitro (self-contained, no node_modules needed)
 COPY --from=builder --chown=node:node /build/.output ./
 
 # CRITICAL: App port must be 3001 (proxy runs on 3000)
