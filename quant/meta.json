@@ -1,6 +1,6 @@
 [{
     "title": "Nuxt 3 (SSR)",
-    "url": "/deploy/step-one?template=app-nuxt",
+    "url": "/deploy/app/app-nuxt",
     "summary": "Nuxt 3 with server-side rendering and Nitro server.",
     "content": "Deploy full-featured Nuxt 3 applications with server-side rendering on Quant Cloud. Uses Vue 3, Nitro server engine, API routes, and universal rendering capabilities.",
     "image": "https://raw.githubusercontent.com/quantcdn-templates/app-nuxt/main/quant/screenshot.png",
