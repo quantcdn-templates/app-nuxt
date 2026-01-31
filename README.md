@@ -2,7 +2,7 @@
 
 A Nuxt 3 server-rendered application template configured for deployment to Quant Cloud.
 
-[![Deploy to Quant Cloud](https://www.quantcdn.io/img/quant-deploy-btn-sml.svg)](https://dashboard.quantcdn.io/deploy/step-one?template=app-nuxt)
+[![Deploy to Quant Cloud](https://www.quantcdn.io/img/quant-deploy-btn-sml.svg)](https://dashboard.quantcdn.io/cloud-apps/create/starter-kit/app-nuxt)
 
 ## Features
 
